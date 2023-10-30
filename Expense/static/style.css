@@ -1,0 +1,66 @@
+.form-login{
+    background-color: rgb(167, 213, 236);
+   padding: 30px;
+   width: 500px;
+
+}
+.form-login h1{
+    color: rgb(29, 100, 223);
+}
+.form-login button{
+    margin-top: 12px;
+    background-color: crimson;
+}
+.navbar{
+    background-color: rgb(7, 35, 145);
+}
+.navbar-brand {
+    color: yellow;
+    font-size: 21px;
+}
+.navbar-brand h4:hover{
+    color: yellow;
+}
+
+.nav-item a{
+    color: #fff;
+}
+.nav-item a:hover{
+    color: #fff;
+}
+/* card */
+.card{
+   border: 2px solid red;
+   padding: 23px;
+   margin-top: 23px;
+   box-shadow: 0 2px 0 ;
+   box-shadow: #1212d4;
+}
+.card-title{
+    color: brown;
+   
+}
+.card-data{
+    color: black;
+   
+}
+.search button{
+    background-color: aliceblue;
+}
+.search{
+    align-items: end;
+}
+img {
+    border-radius: 50%;
+    border: 2px solid white;
+    height: 40px;
+    width: 40px;
+  }
+  .dashboard {
+    color: rgb(56, 185, 64);
+    background-color: rgb(225, 241, 137);
+  }
+  .im{
+    margin-left: 12px;
+    padding: 12px;
+  }

@@ -1,0 +1,64 @@
+{% include "base.html" %}
+
+
+{% block content %} 
+ <!--after login contenet area-->
+<section id="content-logged">
+
+  {% if user.is_authenticated %}  
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <h2 class="dashboard">Dashboard</h2>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-12">
+         <div class="row">
+               {% if records %}
+                   {% for record in records %}
+                      <div class="col-md-4">
+                         <div class="card">
+                             <div class="card-title">
+                                <h4>{{ record.id }}</h4>
+                             </div>
+                             <div class="card-data">
+                               <p>{{ record.category_name }}</p>
+                             </div>
+                          </div>
+                      </div>
+                     {% endfor %}
+                {% endif %}
+         </div>
+     </div>
+    </div>
+ 
+</section>
+  <!--xxxxxxxxxxxafter login contenet areaxxxxxxxxxxxxxxxxxxxxxxxxxxx-->
+  {% else %}
+  <!--Login form area-->
+    <div class="col-md-4 offset-md-3 form-login">
+        <h1>Login</h1>
+        <br/>
+        
+        <form method="POST" action="{% url 'home' %}">
+            {% csrf_token %}
+        
+          <div class="mb-3">
+            <input type="text" class="form-control" name="username", placeholder="Username" required>
+            
+          </div><br/>
+          <div class="mb-3">
+            <input type="password" class="form-control" name="password", placeholder="Password" required>
+          </div>
+          <br/>
+          <button type="submit" class="btn btn-secondary">Login</button>
+        
+        </form>
+         <!--Login firm area-->
+        {% endif %}
+{% endblock  %} 
+       
+
+
+
